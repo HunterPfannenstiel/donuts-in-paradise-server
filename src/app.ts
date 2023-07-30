@@ -1,12 +1,11 @@
 import express, { ErrorRequestHandler } from "express";
 import { config } from "dotenv";
 import { init } from "@utils/socket";
+import "@utils/database/connect";
 import OrderRouter from "@routes/orders";
 
 const app = express();
-console.log(process.env.TEST);
 if (process.env.NODE_ENV !== "production") config();
-console.log(process.env.TEST);
 
 app.get("/", (req, res, next) => {
   res.status(200).json({ message: "hi" });
