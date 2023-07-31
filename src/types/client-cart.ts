@@ -1,8 +1,7 @@
 export type OrderItem = {
-  cart_item_id: number;
-  menu_item_id: number;
+  item_id: number;
   amount: number;
-  extras: number[];
+  extra_ids: number[];
 };
 
 export type OrderDetails = {
